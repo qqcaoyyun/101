@@ -355,15 +355,15 @@
 //
 //	return 0;
 //}
-
-int main()
-{
-	//10*4 = 40 
-	int arr[10] = { 0 };
-	printf("%d\n", sizeof(arr));//计算的是数组的总大小，单位是字节
-	printf("%d\n", sizeof(arr[0]));//4
-	int sz = sizeof(arr) / sizeof(arr[0]);
-	printf("%d\n", sz);
-
-	return 0;
-}
+//
+//int main()
+//{
+//	//10*4 = 40 
+//	int arr[10] = { 0 };
+//	printf("%d\n", sizeof(arr));//计算的是数组的总大小，单位是字节
+//	printf("%d\n", sizeof(arr[0]));//4
+//	int sz = sizeof(arr) / sizeof(arr[0]);
+//	printf("%d\n", sz);
+//
+//	return 0;
+//}
