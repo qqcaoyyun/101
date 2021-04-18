@@ -424,15 +424,15 @@
 //µ¼Èë¾²Ì¬¿â
 #pragma comment(lib, "sub.lib")
 
-int main()
-{
-	int a = 10;
-	int b = 20;
-	//int c = Add(a, b);
-
-	int c = Sub(a, b);
-
-	printf("%d\n", c);
-
-	return 0;
-}
+//int main()
+//{
+//	int a = 10;
+//	int b = 20;
+//	//int c = Add(a, b);
+//
+//	int c = Sub(a, b);
+//
+//	printf("%d\n", c);
+//
+//	return 0;
+//}
