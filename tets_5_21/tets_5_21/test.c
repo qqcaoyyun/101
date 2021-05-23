@@ -288,20 +288,28 @@
 //
 //
 
-int main()
-{
-	int n = 9;
-
-	float* pFloat = (float*)&n;
-	printf("n的值为：%d\n", n);//9
-	printf("*pFloat的值为：%f\n", *pFloat);//9.0
-
-	*pFloat = 9.0;
-	printf("num的值为：%d\n", n);//9
-	printf("*pFloat的值为：%f\n", *pFloat);//9.0
-
-	return 0;
-}
+//int main()
+//{
+//	int n = 9;
+//
+//	float* pFloat = (float*)&n;
+//	printf("n的值为：%d\n", n);//9
+//	printf("*pFloat的值为：%f\n", *pFloat);//9.0
+//
+//	*pFloat = 9.0;
+//	printf("num的值为：%d\n", n);//9
+//	printf("*pFloat的值为：%f\n", *pFloat);//9.0
+//
+//	return 0;
+//}
+//
+//int main()
+//{
+//	char ch = -129;
+//
+//	printf("%d\n", ch);
+//	return 0;
+//}
 
 
 
