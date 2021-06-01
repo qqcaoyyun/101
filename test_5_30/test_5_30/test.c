@@ -205,90 +205,107 @@
 //&数组名 - 数组名表示整个数组，取出的是整个数组的地址
 //除此之外，所有的数组名都是数组首元素的地址
 //
+//
+//int main()
+//{
+//	//int a[] = { 1,2,3,4 };//4*4=16
+//	//printf("%d\n", sizeof(a));//16
+//	//printf("%d\n", sizeof(a + 0));//4/8 a + 0 是第一个元素的地址，sizeof(a + 0)计算的是地址的大小
+//	//printf("%d\n", sizeof(*a));//4  *a是数组的第一个元素，sizeof(*a)计算的是第一个元素的大小
+//	//printf("%d\n", sizeof(a + 1));//4/8 a + 1是第二个元素的地址，sizeof(a+1)计算的地址的大小
+//	//printf("%d\n", sizeof(a[1]));//4 - 计算的是第二个元素的大小
+//
+//	//printf("%d\n", sizeof(&a)); //4/8 - &a虽然数组的地址，但是也是地址，sizeof(&a)计算的是一个地址的大小
+//	//printf("%d\n", sizeof(* &a));//16 - 计算的数组的大小
+//	////&a -- int(*p)[4] = &a;
+//	//printf("%d\n", sizeof(&a + 1));//4/8 - &a + 1 是数组后面的空间的地址
+//	//printf("%d\n", sizeof(&a[0]));//4/8
+//	//printf("%d\n", sizeof(&a[0] + 1));//4/8
+//
+//	//字符数组
+//	//char arr[] = { 'a','b','c','d','e','f' };
+//
+//	//printf("%d\n", strlen(arr));//随机值
+//	//printf("%d\n", strlen(arr + 0));//随机值
+//	////printf("%d\n", strlen(*arr));//err
+//	////printf("%d\n", strlen(arr[1]));//err
+//	//printf("%d\n", strlen(&arr));//随机值
+//	//printf("%d\n", strlen(&arr + 1));//随机值-6
+//	//printf("%d\n", strlen(&arr[0] + 1));//随机值-1
+//
+//	//printf("%d\n", sizeof(arr));//6
+//	//printf("%d\n", sizeof(arr + 0));//4/8
+//	//printf("%d\n", sizeof(*arr));//1
+//	//printf("%d\n", sizeof(arr[1]));//1
+//	//printf("%d\n", sizeof(&arr));//4/8
+//	//printf("%d\n", sizeof(&arr + 1));//4/8
+//	//printf("%d\n", sizeof(&arr[0] + 1));//4/8
+//
+//
+//
+//	//char arr[] = "abcdef";
+//	////[a b c d e f \0]
+//	//printf("%d\n", strlen(arr));//6
+//	//printf("%d\n", strlen(arr + 0));//6
+//	////printf("%d\n", strlen(*arr));//err
+//	////printf("%d\n", strlen(arr[1]));//err
+//	//printf("%d\n", strlen(&arr));//6
+//	//printf("%d\n", strlen(&arr + 1));//随机值
+//	//printf("%d\n", strlen(&arr[0] + 1));//5
+//
+//
+//	//[a b c d e f \0] 
+//	//printf("%d\n", sizeof(arr));//7
+//	//printf("%d\n", sizeof(arr + 0));//4/8
+//	//printf("%d\n", sizeof(*arr));//1
+//	//printf("%d\n", sizeof(arr[1]));//1
+//	//printf("%d\n", sizeof(&arr));//4/8  char(*)[7]
+//	//printf("%d\n", sizeof(&arr + 1));//4/8 
+//	//printf("%d\n", sizeof(&arr[0] + 1));//4/8
+//
+//	char* p = "abcdef";
+//
+//	printf("%d\n", strlen(p));
+//	printf("%d\n", strlen(p + 1));
+//	printf("%d\n", strlen(*p));
+//	printf("%d\n", strlen(p[0]));
+//	printf("%d\n", strlen(&p));
+//	printf("%d\n", strlen(&p + 1));
+//	printf("%d\n", strlen(&p[0] + 1));
+//
+//
+//	//printf("%d\n", sizeof(p));
+//	//printf("%d\n", sizeof(p + 1));
+//	//printf("%d\n", sizeof(*p));
+//	//printf("%d\n", sizeof(p[0]));
+//	//printf("%d\n", sizeof(&p));
+//	//printf("%d\n", sizeof(&p + 1));
+//	//printf("%d\n", sizeof(&p[0] + 1));
+//
+//
+//
+//	return 0;
+//}
+
+
+
+
+
+#include <stdio.h>
 
 int main()
 {
-	//int a[] = { 1,2,3,4 };//4*4=16
-	//printf("%d\n", sizeof(a));//16
-	//printf("%d\n", sizeof(a + 0));//4/8 a + 0 是第一个元素的地址，sizeof(a + 0)计算的是地址的大小
-	//printf("%d\n", sizeof(*a));//4  *a是数组的第一个元素，sizeof(*a)计算的是第一个元素的大小
-	//printf("%d\n", sizeof(a + 1));//4/8 a + 1是第二个元素的地址，sizeof(a+1)计算的地址的大小
-	//printf("%d\n", sizeof(a[1]));//4 - 计算的是第二个元素的大小
-
-	//printf("%d\n", sizeof(&a)); //4/8 - &a虽然数组的地址，但是也是地址，sizeof(&a)计算的是一个地址的大小
-	//printf("%d\n", sizeof(* &a));//16 - 计算的数组的大小
-	////&a -- int(*p)[4] = &a;
-	//printf("%d\n", sizeof(&a + 1));//4/8 - &a + 1 是数组后面的空间的地址
-	//printf("%d\n", sizeof(&a[0]));//4/8
-	//printf("%d\n", sizeof(&a[0] + 1));//4/8
-
-	//字符数组
-	//char arr[] = { 'a','b','c','d','e','f' };
-
-	//printf("%d\n", strlen(arr));//随机值
-	//printf("%d\n", strlen(arr + 0));//随机值
-	////printf("%d\n", strlen(*arr));//err
-	////printf("%d\n", strlen(arr[1]));//err
-	//printf("%d\n", strlen(&arr));//随机值
-	//printf("%d\n", strlen(&arr + 1));//随机值-6
-	//printf("%d\n", strlen(&arr[0] + 1));//随机值-1
-
-	//printf("%d\n", sizeof(arr));//6
-	//printf("%d\n", sizeof(arr + 0));//4/8
-	//printf("%d\n", sizeof(*arr));//1
-	//printf("%d\n", sizeof(arr[1]));//1
-	//printf("%d\n", sizeof(&arr));//4/8
-	//printf("%d\n", sizeof(&arr + 1));//4/8
-	//printf("%d\n", sizeof(&arr[0] + 1));//4/8
-
-
-
-	//char arr[] = "abcdef";
-	////[a b c d e f \0]
-	//printf("%d\n", strlen(arr));//6
-	//printf("%d\n", strlen(arr + 0));//6
-	////printf("%d\n", strlen(*arr));//err
-	////printf("%d\n", strlen(arr[1]));//err
-	//printf("%d\n", strlen(&arr));//6
-	//printf("%d\n", strlen(&arr + 1));//随机值
-	//printf("%d\n", strlen(&arr[0] + 1));//5
-
-
-	//[a b c d e f \0] 
-	//printf("%d\n", sizeof(arr));//7
-	//printf("%d\n", sizeof(arr + 0));//4/8
-	//printf("%d\n", sizeof(*arr));//1
-	//printf("%d\n", sizeof(arr[1]));//1
-	//printf("%d\n", sizeof(&arr));//4/8  char(*)[7]
-	//printf("%d\n", sizeof(&arr + 1));//4/8 
-	//printf("%d\n", sizeof(&arr[0] + 1));//4/8
-
-	char* p = "abcdef";
-
-	printf("%d\n", strlen(p));
-	printf("%d\n", strlen(p + 1));
-	printf("%d\n", strlen(*p));
-	printf("%d\n", strlen(p[0]));
-	printf("%d\n", strlen(&p));
-	printf("%d\n", strlen(&p + 1));
-	printf("%d\n", strlen(&p[0] + 1));
-
-
-	//printf("%d\n", sizeof(p));
-	//printf("%d\n", sizeof(p + 1));
-	//printf("%d\n", sizeof(*p));
-	//printf("%d\n", sizeof(p[0]));
-	//printf("%d\n", sizeof(&p));
-	//printf("%d\n", sizeof(&p + 1));
-	//printf("%d\n", sizeof(&p[0] + 1));
-
-
-
+	int arr[] = { 1,2,3,4,5,6,7,8,9,-10 };
+	int min = arr[0];
+	int i = 0;
+	int sz = sizeof(arr) / sizeof(arr[0]);
+	for (i = 0; i < sz; i++)
+	{
+		if (arr[i] < min)
+		{
+			min = arr[i];
+		}
+	}
+	printf("%d\n", min);
 	return 0;
 }
-
-
-
-
-
-
